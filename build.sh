@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FULL_IMAGE_NAME="${FULL_IMAGE_NAME}"
+FULL_IMAGE_NAME="${FULL_IMAGE_NAME,,}"
 
 poetry export --no-interaction --without-hashes --format requirements.txt --output requirements.txt
 
