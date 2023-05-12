@@ -64,7 +64,7 @@ jobs:
         shell: bash
         run: |
           poetry install
-      - id: Setup pack
+      - name: Setup pack
         uses: buildpacks/github-actions/setup-pack@v5.2.0
       - name: Log in to the Container registry
         uses: docker/login-action@v2
