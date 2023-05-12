@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+PROJECT_ID="${PROJECT_ID}"
+
 poetry export --no-interaction --without-hashes --format requirements.txt --output requirements.txt
 
 MODULE_NAME="python-functions-cloud-run-buildpacks"
