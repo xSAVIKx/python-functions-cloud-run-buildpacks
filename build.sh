@@ -1,21 +1,20 @@
 #!/usr/bin/env bash
 
-PROJECT_ID="${PROJECT_ID}"
+FULL_IMAGE_NAME="${FULL_IMAGE_NAME}"
 
 poetry export --no-interaction --without-hashes --format requirements.txt --output requirements.txt
 
 MODULE_NAME="python-functions-cloud-run-buildpacks"
-IMAGE_NAME="gcr.io/${PROJECT_ID}/cloud-run-buildpacks"
 MODULE_VERSION=$( poetry version | sed "s/^.*${MODULE_NAME}\s//g" )
 GIT_SHA=$( git rev-parse HEAD )
 
-pack build "${IMAGE_NAME}" \
+pack build "${FULL_IMAGE_NAME}" \
   --descriptor "project.toml" \
   --builder "gcr.io/buildpacks/google-22/builder:latest" \
   --run-image "gcr.io/buildpacks/google-22/run:latest" \
   --clear-cache \
-  --tag "${IMAGE_NAME}:latest" \
-  --tag "${IMAGE_NAME}:${GIT_SHA}" \
-  --tag "${IMAGE_NAME}:${GIT_SHA:0:7}" \
-  --tag "${IMAGE_NAME}:${MODULE_VERSION}" \
+  --tag "${FULL_IMAGE_NAME}:latest" \
+  --tag "${FULL_IMAGE_NAME}:${GIT_SHA}" \
+  --tag "${FULL_IMAGE_NAME}:${GIT_SHA:0:7}" \
+  --tag "${FULL_IMAGE_NAME}:${MODULE_VERSION}" \
   --publish
