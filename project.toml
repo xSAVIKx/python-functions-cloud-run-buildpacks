@@ -6,7 +6,7 @@ version = "1.0.0"
 
 [io.buildpacks]
 include = [
-    "python_functions_cloud_run_buildpacks/",
+    "python_functions_cloud_run_buildpacks",
     "main.py",
     "project.toml",
     "pyproject.toml",
