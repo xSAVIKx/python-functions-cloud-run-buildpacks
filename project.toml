@@ -4,7 +4,7 @@ name = "Cloud Run Buildpacks Example"
 authors = ["Yurii Serhiichuk <savik.ne@gmail.com>"]
 version = "1.0.0"
 
-[build]
+[io.buildpacks]
 include = [
     "python_functions_cloud_run_buildpacks/",
     "main.py",
