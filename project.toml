@@ -16,6 +16,27 @@ include = [
     "poetry.toml"
 ]
 
+[[io.buildpacks.group]]
+id = "google.python.runtime"
+
+  [io.buildpacks.group.script]
+  api = "0.6"
+  inline = "ls -la /workspace"
+
+[[io.buildpacks.group]]
+id = "google.python.functions-framework"
+
+  [io.buildpacks.group.script]
+  api = "0.6"
+  inline = "ls -la /workspace"
+
+[[io.buildpacks.group]]
+id = "google.python.pip"
+
+  [io.buildpacks.group.script]
+  api = "0.6"
+  inline = "ls -la /workspace"
+
 [[build.env]]
 name = "GOOGLE_FUNCTION_TARGET"
 value = "handle"
