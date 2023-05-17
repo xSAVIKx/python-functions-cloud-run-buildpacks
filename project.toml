@@ -15,11 +15,8 @@ uri = "https://github.com/xSAVIKx/python-functions-cloud-run-buildpacks/blob/mas
 include = [
     "python_functions_cloud_run_buildpacks",
     "main.py",
-    "project.toml",
     "pyproject.toml",
-    "poetry.lock",
     "requirements.txt",
-    "poetry.toml",
     "LICENSE"
 ]
 
