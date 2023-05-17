@@ -60,6 +60,10 @@ jobs:
         uses: abatilo/actions-poetry@v2.2.0
         with:
           poetry-version: ${{ env.POETRY_VERSION }}
+      - name: Install dependencies
+        shell: bash
+        run: |
+          poetry install
       - name: Setup pack
         uses: buildpacks/github-actions/setup-pack@v5.2.0
       - name: Log in to the Container registry
