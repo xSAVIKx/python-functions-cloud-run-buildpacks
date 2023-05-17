@@ -7,6 +7,10 @@ version = "1.0.0"
 source-url = "https://github.com/xSAVIKx/python-functions-cloud-run-buildpacks"
 documentation-url = "https://github.com/xSAVIKx/python-functions-cloud-run-buildpacks/blob/master/README.md"
 
+[[_.licenses]]
+type = "Apache-2.0"
+uri = "https://github.com/xSAVIKx/python-functions-cloud-run-buildpacks/blob/master/LICENSE"
+
 [io.buildpacks]
 include = [
     "python_functions_cloud_run_buildpacks",
